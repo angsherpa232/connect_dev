@@ -449,6 +449,7 @@ img {
 .profile-grid .profile-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: top;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -482,6 +483,7 @@ img {
 .profile-grid .profile-about {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: about;
   text-align: center;
 }
@@ -506,8 +508,8 @@ img {
 }
 
 .profile-grid .profile-edu {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: edu;
 }
 
@@ -529,8 +531,9 @@ img {
 }
 
 .profile-grid .profile-github {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: github;
 }
 
@@ -613,35 +616,29 @@ img {
     width: 100%;
     margin-bottom: 0.2rem;
   }
-}
-
-.profile {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  text-align: center;
-}
-
-.profile ul {
-  display: none;
-}
-
-.profile .profile-grid {
-      grid-template-areas: "top" "about" "exp" "edu" "github";
-}
-
-.profile .profile-about .skills {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.post .post {
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-.post .post a,
-.post .post button {
-  padding: 0.3rem 0.4rem;
+  .profile {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile ul {
+    display: none;
+  }
+  .profile .profile-grid {
+        grid-template-areas: "top" "about" "exp" "edu" "github";
+  }
+  .profile .profile-about .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .posts .post {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .posts .post a,
+  .posts .post button {
+    padding: 0.3rem 0.4rem;
+  }
 }
