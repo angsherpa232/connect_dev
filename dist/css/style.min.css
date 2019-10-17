@@ -449,7 +449,6 @@ img {
 .profile-grid .profile-top {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: top;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -483,7 +482,6 @@ img {
 .profile-grid .profile-about {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: about;
   text-align: center;
 }
@@ -508,8 +506,8 @@ img {
 }
 
 .profile-grid .profile-edu {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: edu;
 }
 
@@ -531,9 +529,8 @@ img {
 }
 
 .profile-grid .profile-github {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: github;
 }
 
@@ -557,4 +554,94 @@ img {
           flex: 3;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+}
+
+.post-form-header {
+  padding: 0.5rem;
+}
+
+.post {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post > div:first-child {
+  text-align: center;
+}
+
+.post img {
+  width: 150px;
+}
+
+@media (max-width: 700px) {
+  .hide-sm {
+    display: none;
+  }
+  .container {
+    margin-top: 8rem;
+  }
+  .x-large {
+    font-size: 3rem;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+  .navbar ul {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar h1 {
+    margin-bottom: 1rem;
+  }
+  .dash-buttons a {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.profile {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.profile ul {
+  display: none;
+}
+
+.profile .profile-grid {
+      grid-template-areas: "top" "about" "exp" "edu" "github";
+}
+
+.profile .profile-about .skills {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post .post {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.post .post a,
+.post .post button {
+  padding: 0.3rem 0.4rem;
 }
